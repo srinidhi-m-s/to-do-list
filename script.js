@@ -53,7 +53,6 @@ listContainer.addEventListener("click", (e)=>{
     
     
 },false);
-
 function saveEdit(input, listItem) {
     const newText = input.value.trim();
     const li = document.createElement("li"); 
@@ -68,8 +67,6 @@ function saveEdit(input, listItem) {
 
     saveData(); 
 }
-
-
 function saveData(){
     localStorage.setItem("data",listContainer.innerHTML);
 }
@@ -77,5 +74,4 @@ function showData(){
     
     listContainer.innerHTML=localStorage.getItem("data");
 }
-
 showData();
